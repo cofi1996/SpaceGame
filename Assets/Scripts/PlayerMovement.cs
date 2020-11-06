@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Movement script awake...");
+        Debug.Log("Movement script started...");
         rb = GetComponent<Rigidbody>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         
@@ -45,11 +45,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void movePlayerLeft()
     {
-        rb.velocity = new Vector3(0,0,-PlayerScript.enginePower);
+        rb.velocity = new Vector3(-PlayerScript.enginePower,0,0);
     }
     private void movePlayerRight()
     {
-         rb.velocity = new Vector3(0,0, PlayerScript.enginePower);
+         rb.velocity = new Vector3(PlayerScript.enginePower,0, 0);
     }
     private void movePlayerUp()
     {
